@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD000;
+}
+
+/* Metallic Texture Overlay Effect */
+.bg-metal-pattern {
+  background-image: radial-gradient(rgba(255, 208, 0, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Gym Barbell Divider */
+.barbell-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.barbell-line {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #FFD000, transparent);
+  width: 100%;
+}
+
+.barbell-plate {
+  width: 16px;
+  height: 24px;
+  background: #FFD000;
+  border-radius: 3px;
+  margin: 0 4px;
+  box-shadow: 0 0 10px rgba(255, 208, 0, 0.6);
+}
+
+.barbell-center-knurl {
+  width: 40px;
+  height: 10px;
+  background: #333333;
+  border: 1px solid #FFD000;
+  border-radius: 2px;
+}
