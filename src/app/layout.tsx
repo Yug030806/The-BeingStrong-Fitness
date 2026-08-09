@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/logo.jpg",
+        url: "/images/the_beingstrong_logo.png",
         width: 1200,
         height: 630,
         alt: "The BeingStrong Fitness Logo",
@@ -52,11 +52,11 @@ export const metadata: Metadata = {
     title: "The BeingStrong Fitness | Stay Strong and Fit",
     description:
       "A dedicated fitness centre in Vadodara focused on strength, fitness and consistent training.",
-    images: ["/images/logo.jpg"],
+    images: ["/images/the_beingstrong_logo.png"],
   },
   icons: {
-    icon: "/images/logo.jpg",
-    apple: "/images/logo.jpg",
+    icon: "/images/the_beingstrong_logo.png",
+    apple: "/images/the_beingstrong_logo.png",
   },
 };
 
@@ -75,7 +75,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "The BeingStrong Fitness",
-              image: "/images/logo.jpg",
+              image: "/images/the_beingstrong_logo.png",
               telephone: "+919724073707",
               address: {
                 "@type": "PostalAddress",

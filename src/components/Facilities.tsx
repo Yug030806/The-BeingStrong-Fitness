@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Dumbbell, ShieldAlert } from "lucide-react";
+import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const facilityCards = [
   {
@@ -86,6 +87,8 @@ export default function Facilities() {
                   src={card.image}
                   alt={card.title}
                   fill
+                  quality={IMAGE_QUALITY}
+                  sizes={imageSizes.thirdWidth}
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/30 to-transparent" />

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Trophy, Crown, ShieldAlert } from "lucide-react";
+import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 export default function Owners() {
   return (
@@ -42,6 +43,8 @@ export default function Owners() {
                   src="/images/hero-bg.jpg"
                   alt="Gym Owner Placeholder"
                   fill
+                  quality={IMAGE_QUALITY}
+                  sizes={imageSizes.halfWidth}
                   className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />

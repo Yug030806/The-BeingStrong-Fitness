@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Instagram, ArrowRight } from "lucide-react";
+import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 export default function Hero() {
   return (
@@ -15,6 +16,8 @@ export default function Hero() {
           alt="The BeingStrong Fitness Gym Interior"
           fill
           priority
+          quality={IMAGE_QUALITY}
+          sizes={imageSizes.fullWidth}
           className="object-cover object-center opacity-40 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-brand-black/40" />
@@ -125,7 +128,7 @@ export default function Hero() {
                 LOCATION
               </span>
               <span className="text-sm font-bold text-brand-white group-hover:text-brand-yellow transition-colors">
-                📍 VADODARA, GUJARAT
+                VADODARA, GUJARAT
               </span>
             </div>
           </a>
@@ -143,7 +146,7 @@ export default function Hero() {
                 CALL GYM DIRECTLY
               </span>
               <span className="text-sm font-bold text-brand-white group-hover:text-brand-yellow transition-colors">
-                📞 +91 97240 73707
+                +91 97240 73707
               </span>
             </div>
           </a>
@@ -163,7 +166,7 @@ export default function Hero() {
                 INSTAGRAM PROFILE
               </span>
               <span className="text-sm font-bold text-brand-white group-hover:text-brand-yellow transition-colors">
-                📸 @the_beingstrong_fitness
+                @the_beingstrong_fitness
               </span>
             </div>
           </a>

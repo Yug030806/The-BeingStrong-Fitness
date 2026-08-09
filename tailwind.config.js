@@ -27,6 +27,8 @@ module.exports = {
         "spin-slow": "spin 20s linear infinite",
         "pulse-glow": "pulseGlow 2s infinite ease-in-out",
         "float-slow": "float 6s ease-in-out infinite",
+        "menu-slide-down": "menuSlideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "menu-fade-in": "menuFadeIn 0.3s ease-out forwards",
       },
       keyframes: {
         pulseGlow: {
@@ -36,6 +38,14 @@ module.exports = {
         float: {
           "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
           "50%": { transform: "translateY(-12px) rotate(3deg)" },
+        },
+        menuSlideDown: {
+          "0%": { opacity: "0", transform: "translateY(-12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        menuFadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
       },
     },

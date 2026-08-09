@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Flame, ArrowRight } from "lucide-react";
+import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 export default function Motivational() {
   return (
@@ -14,6 +15,8 @@ export default function Motivational() {
           src="/images/hero-bg.jpg"
           alt="Motivational Gym Atmosphere"
           fill
+          quality={IMAGE_QUALITY}
+          sizes={imageSizes.fullWidth}
           className="object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/90 to-brand-black" />

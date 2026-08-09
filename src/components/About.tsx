@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Dumbbell, ShieldCheck, Flame } from "lucide-react";
+import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 export default function About() {
   return (
@@ -23,6 +24,8 @@ export default function About() {
                 src="/images/about-gym.jpg"
                 alt="The BeingStrong Fitness Gym Floor"
                 fill
+                quality={IMAGE_QUALITY}
+                sizes={imageSizes.halfWidth}
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80" />

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, MapPin, Instagram, ArrowUp } from "lucide-react";
+import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const quickLinks = [
   { name: "HOME", href: "#home" },
@@ -10,7 +11,6 @@ const quickLinks = [
   { name: "FACILITIES", href: "#facilities" },
   { name: "TRAINERS", href: "#trainers" },
   { name: "MEMBERSHIP", href: "#membership" },
-  { name: "GALLERY", href: "#gallery" },
   { name: "REVIEWS", href: "#reviews" },
   { name: "CONTACT", href: "#contact" },
 ];
@@ -40,9 +40,12 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-brand-yellow">
                 <Image
-                  src="/images/logo.jpg"
+                  src="/images/the_beingstrong_logo.png"
                   alt="The BeingStrong Fitness Logo"
                   fill
+                  quality={100}
+                  unoptimized
+                  sizes={imageSizes.logo}
                   className="object-cover"
                 />
               </div>

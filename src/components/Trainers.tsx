@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Instagram, Dumbbell, ShieldCheck } from "lucide-react";
+import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const placeholderTrainers = [
   {
@@ -65,6 +66,8 @@ export default function Trainers() {
                   src={trainer.image}
                   alt={trainer.name}
                   fill
+                  quality={IMAGE_QUALITY}
+                  sizes={imageSizes.thirdWidth}
                   className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />

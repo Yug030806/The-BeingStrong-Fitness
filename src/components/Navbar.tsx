@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
+import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const navLinks = [
   { name: "HOME", href: "#home" },
@@ -11,7 +12,6 @@ const navLinks = [
   { name: "FACILITIES", href: "#facilities" },
   { name: "TRAINERS", href: "#trainers" },
   { name: "MEMBERSHIP", href: "#membership" },
-  { name: "GALLERY", href: "#gallery" },
   { name: "REVIEWS", href: "#reviews" },
   { name: "CONTACT", href: "#contact" },
 ];
@@ -20,6 +20,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
@@ -27,6 +29,29 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const scrollY = window.scrollY;
+    const { overflow, position, top, width, touchAction } =
+      document.body.style;
+
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+    document.body.style.touchAction = "none";
+
+    return () => {
+      document.body.style.overflow = overflow;
+      document.body.style.position = position;
+      document.body.style.top = top;
+      document.body.style.width = width;
+      document.body.style.touchAction = touchAction;
+      window.scrollTo(0, scrollY);
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header
@@ -39,12 +64,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo & Name */}
         <Link href="#home" className="flex items-center gap-3 group">
-          <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-brand-yellow group-hover:scale-105 transition-transform">
+          <div className="relative w-14 h-14 sm:w-16 sm:h-16 group-hover:scale-105 transition-transform">
             <Image
-              src="/images/logo.jpg"
+              src="/images/the_beingstrong_logo.png"
               alt="The BeingStrong Fitness Logo"
               fill
-              className="object-cover"
+              priority
+              quality={100}
+              unoptimized
+              sizes={imageSizes.logo}
+              className="object-contain"
             />
           </div>
           <div className="flex flex-col">
@@ -89,28 +118,67 @@ export default function Navbar() {
 
         {/* Mobile Hamburger Button */}
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-brand-white hover:text-brand-yellow transition-colors"
-          aria-label="Toggle Menu"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+          className="lg:hidden relative z-[60] p-2 text-brand-white hover:text-brand-yellow transition-colors"
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-brand-black/98 border-b border-brand-darkgray p-6 flex flex-col gap-4 shadow-2xl backdrop-blur-xl animate-fadeIn">
-          {navLinks.map((link) => (
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`lg:hidden fixed inset-0 z-40 transition-opacity duration-300 ease-out ${
+          mobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+        aria-hidden={!mobileMenuOpen}
+      >
+        {/* Backdrop */}
+        <button
+          type="button"
+          aria-label="Close menu"
+          onClick={closeMobileMenu}
+          className={`absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity duration-300 ease-out ${
+            mobileMenuOpen ? "animate-menu-fade-in" : ""
+          }`}
+        />
+
+        {/* Drawer */}
+        <div
+          className={`absolute inset-x-0 top-[65px] max-h-[calc(100dvh-65px)] overflow-y-auto overscroll-contain bg-brand-black/98 border-b border-brand-darkgray p-6 flex flex-col gap-4 shadow-2xl backdrop-blur-xl transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            mobileMenuOpen
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-3 opacity-0"
+          }`}
+        >
+          {navLinks.map((link, index) => (
             <Link
               key={link.name}
               href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-sm font-bold tracking-widest text-brand-white hover:text-brand-yellow py-2 border-b border-brand-darkgray/50"
+              onClick={closeMobileMenu}
+              className={`text-sm font-bold tracking-widest text-brand-white hover:text-brand-yellow py-2 border-b border-brand-darkgray/50 transition-all duration-300 ease-out ${
+                mobileMenuOpen
+                  ? "translate-y-0 opacity-100"
+                  : "-translate-y-2 opacity-0"
+              }`}
+              style={{
+                transitionDelay: mobileMenuOpen ? `${80 + index * 40}ms` : "0ms",
+              }}
             >
               {link.name}
             </Link>
           ))}
-          <div className="pt-4 flex flex-col gap-3">
+          <div
+            className={`pt-4 flex flex-col gap-3 transition-all duration-300 ease-out ${
+              mobileMenuOpen
+                ? "translate-y-0 opacity-100"
+                : "translate-y-2 opacity-0"
+            }`}
+            style={{ transitionDelay: mobileMenuOpen ? "400ms" : "0ms" }}
+          >
             <a
               href="tel:+919724073707"
               className="flex items-center justify-center gap-2 py-2.5 border border-brand-darkgray text-brand-white text-sm font-semibold rounded"
@@ -120,14 +188,14 @@ export default function Navbar() {
             </a>
             <Link
               href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
               className="text-center py-3 bg-brand-yellow text-brand-black font-heading text-lg tracking-wider rounded"
             >
               JOIN NOW
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
