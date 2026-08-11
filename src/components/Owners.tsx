@@ -2,32 +2,29 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Trophy, Crown, ShieldAlert } from "lucide-react";
+import { Crown, Instagram } from "lucide-react";
 import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const placeholderOwners = [
   {
     id: 1,
     name: "[OWNER NAME]",
-    role: "FOUNDER & GYM MANAGEMENT",
-    quote: "Dedicated to providing Vadodara with an uncompromising fitness venue where discipline, proper equipment, and motivation meet.",
-    vision: "To establish The BeingStrong Fitness as Vadodara’s premier destination for strength development.",
+    insta: "@the_beingstrong_fitness",
+    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/hero-bg.jpg",
   },
   {
     id: 2,
     name: "[OWNER NAME]",
-    role: "CO-FOUNDER & MANAGING DIRECTOR",
-    quote: "Fostering a supportive community where fitness targets are transformed into lasting achievements.",
-    vision: "Creating world-class workout standards with top-tier equipment and environment.",
+    insta: "@the_beingstrong_fitness",
+    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/about-gym.jpg",
   },
   {
     id: 3,
     name: "[OWNER NAME]",
-    role: "OPERATIONS & STRATEGY DIRECTOR",
-    quote: "Ensuring seamless gym facilities, member care, and relentless commitment to quality fitness services.",
-    vision: "Expanding modern athletic training culture across Vadodara and beyond.",
+    insta: "@the_beingstrong_fitness",
+    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/facility-dumbbells.jpg",
   },
 ];
@@ -66,52 +63,44 @@ export default function Owners() {
               whileHover={{ y: -8 }}
               className="bg-gradient-to-b from-brand-charcoal to-brand-card border-2 border-brand-yellow/40 rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,208,0,0.08)] hover:border-brand-yellow transition-all duration-300 flex flex-col justify-between"
             >
-              <div>
-                {/* Photo Header */}
-                <div className="relative h-64 w-full bg-brand-darkgray overflow-hidden">
-                  <Image
-                    src={owner.image}
-                    alt={owner.name}
-                    fill
-                    quality={IMAGE_QUALITY}
-                    sizes={imageSizes.thirdWidth}
-                    className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
-                  
-                  <div className="absolute top-4 left-4 p-2 rounded-full bg-brand-yellow text-brand-black">
-                    <Trophy size={16} />
-                  </div>
-                  
-                  <div className="absolute bottom-3 left-4 right-4 p-2 bg-brand-black/80 backdrop-blur-md rounded border border-brand-darkgray text-center">
-                    <span className="font-heading text-sm text-brand-yellow tracking-wider block">
-                      {owner.role}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Details Body */}
-                <div className="p-6 space-y-4">
-                  <h3 className="font-heading text-3xl uppercase tracking-wider text-brand-white">
-                    {owner.name}
-                  </h3>
-
-                  <p className="border-l-2 border-brand-yellow pl-3 italic text-brand-white text-sm leading-relaxed">
-                    &quot;{owner.quote}&quot;
-                  </p>
-
-                  <p className="text-brand-gray text-xs sm:text-sm leading-relaxed">
-                    <strong className="text-brand-yellow">VISION:</strong> {owner.vision}
-                  </p>
-                </div>
+              {/* Photo with extra space */}
+              <div className="relative h-80 sm:h-[400px] w-full bg-brand-darkgray overflow-hidden">
+                <Image
+                  src={owner.image}
+                  alt={owner.name}
+                  fill
+                  quality={IMAGE_QUALITY}
+                  sizes={imageSizes.thirdWidth}
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
               </div>
 
-              {/* Card Footer Notice */}
-              <div className="p-6 pt-0">
-                <div className="pt-4 border-t border-brand-darkgray flex items-center gap-2 text-[11px] text-brand-gray">
-                  <ShieldAlert size={14} className="text-brand-yellow shrink-0" />
-                  <span>Leadership profile details can be customized.</span>
+              {/* Name & Instagram ID only */}
+              <div className="p-6 flex items-center justify-between gap-3 border-t border-brand-darkgray bg-brand-black">
+                <div className="truncate">
+                  <h3 className="font-heading text-2xl sm:text-3xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors truncate">
+                    {owner.name}
+                  </h3>
+                  <a
+                    href={owner.instaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs sm:text-sm text-brand-gray hover:text-brand-yellow transition-colors block truncate"
+                  >
+                    {owner.insta}
+                  </a>
                 </div>
+
+                <a
+                  href={owner.instaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-brand-charcoal text-brand-yellow hover:bg-brand-yellow hover:text-brand-black transition-colors shrink-0"
+                  aria-label="Instagram profile"
+                >
+                  <Instagram size={20} />
+                </a>
               </div>
             </motion.div>
           ))}

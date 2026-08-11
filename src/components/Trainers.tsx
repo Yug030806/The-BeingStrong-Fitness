@@ -2,36 +2,36 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram, Dumbbell, ShieldCheck } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const placeholderTrainers = [
   {
     id: 1,
     name: "[TRAINER NAME]",
-    role: "HEAD STRENGTH COACH",
-    bio: "[TRAINER INFORMATION] — Expert in heavy compound lifts, powerlifting technique, and muscle hypertrophy coaching.",
+    insta: "@the_beingstrong_fitness",
+    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/about-gym.jpg",
   },
   {
     id: 2,
     name: "[TRAINER NAME]",
-    role: "FITNESS & CONDITIONING COACH",
-    bio: "[TRAINER INFORMATION] — Specializing in fat loss, athletic conditioning, mobility, and functional movement.",
+    insta: "@the_beingstrong_fitness",
+    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/facility-dumbbells.jpg",
   },
   {
     id: 3,
     name: "[TRAINER NAME]",
-    role: "PERSONAL COACH",
-    bio: "[TRAINER INFORMATION] — Dedicated 1-on-1 personal guidance for custom fitness transformations and nutrition oversight.",
+    insta: "@the_beingstrong_fitness",
+    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/facility-cardio.jpg",
   },
   {
     id: 4,
     name: "[TRAINER NAME]",
-    role: "FUNCTIONAL & HYPERTROPHY COACH",
-    bio: "[TRAINER INFORMATION] — Focused on body composition, strength routines, endurance, and form precision.",
+    insta: "@the_beingstrong_fitness",
+    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/hero-bg.jpg",
   },
 ];
@@ -50,10 +50,6 @@ export default function Trainers() {
           <p className="text-brand-gray text-base sm:text-lg">
             Train alongside experienced fitness coaches committed to your progress and safety.
           </p>
-          <div className="mt-3 inline-flex items-center gap-2 text-xs text-brand-gray bg-brand-black px-3 py-1 rounded border border-brand-darkgray">
-            <ShieldCheck size={14} className="text-brand-yellow" />
-            <span>Trainer details are easy-to-edit placeholders ready for your team profiles.</span>
-          </div>
         </div>
 
         {/* Trainers Grid - 4 tabs in a row */}
@@ -66,48 +62,46 @@ export default function Trainers() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-brand-black border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col"
+              className="bg-brand-black border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col justify-between"
             >
-              <div className="relative h-64 w-full bg-brand-darkgray overflow-hidden">
+              {/* Image with increased space */}
+              <div className="relative h-80 sm:h-96 w-full bg-brand-darkgray overflow-hidden">
                 <Image
                   src={trainer.image}
                   alt={trainer.name}
                   fill
                   quality={IMAGE_QUALITY}
                   sizes={imageSizes.fourthWidth}
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
-                
-                <div className="absolute top-4 left-4 p-2 rounded-full bg-brand-yellow text-brand-black">
-                  <Dumbbell size={16} />
-                </div>
               </div>
 
-              <div className="p-5 flex flex-col flex-grow justify-between">
-                <div>
-                  <span className="text-[11px] font-bold text-brand-yellow uppercase tracking-widest block mb-1">
-                    {trainer.role}
-                  </span>
-                  <h3 className="font-heading text-2xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors mb-3">
+              {/* Name & Instagram ID only */}
+              <div className="p-5 flex items-center justify-between gap-3 border-t border-brand-darkgray bg-brand-black">
+                <div className="truncate">
+                  <h3 className="font-heading text-xl sm:text-2xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors truncate">
                     {trainer.name}
                   </h3>
-                  <p className="text-brand-gray text-xs sm:text-sm leading-relaxed mb-6">
-                    {trainer.bio}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-brand-darkgray flex items-center justify-between">
-                  <span className="text-[10px] text-brand-gray font-semibold">COACHING STAFF</span>
                   <a
-                    href="https://www.instagram.com/the_beingstrong_fitness/"
+                    href={trainer.instaLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-brand-charcoal text-brand-yellow hover:bg-brand-yellow hover:text-brand-black transition-colors"
+                    className="text-xs text-brand-gray hover:text-brand-yellow transition-colors block truncate"
                   >
-                    <Instagram size={16} />
+                    {trainer.insta}
                   </a>
                 </div>
+
+                <a
+                  href={trainer.instaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-full bg-brand-charcoal text-brand-yellow hover:bg-brand-yellow hover:text-brand-black transition-colors shrink-0"
+                  aria-label="Instagram profile"
+                >
+                  <Instagram size={18} />
+                </a>
               </div>
             </motion.div>
           ))}
