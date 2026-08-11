@@ -150,114 +150,61 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right Column: Enquiry Form */}
+          {/* Right Column: Official Gym Showcase replacing the callback request option */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-7 bg-brand-card border border-brand-darkgray rounded-2xl p-8 shadow-xl relative"
+            className="lg:col-span-7 bg-gradient-to-br from-brand-card via-brand-charcoal to-brand-black border-2 border-brand-yellow/40 rounded-2xl p-8 sm:p-12 shadow-[0_0_50px_rgba(255,208,0,0.12)] relative overflow-hidden flex flex-col justify-between"
           >
-            <h3 className="font-heading text-3xl uppercase tracking-wider text-brand-white mb-2">
-              GET IN TOUCH
-            </h3>
-            <p className="text-brand-gray text-xs mb-8">
-              Fill out your details below to request a call back from our training desk.
-            </p>
+            <div className="absolute -top-16 -right-16 w-64 h-64 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none" />
 
-            {submitted ? (
-              <div className="p-8 bg-brand-charcoal border border-brand-yellow rounded-xl text-center space-y-4 animate-fadeIn">
-                <CheckCircle2 size={48} className="text-brand-yellow mx-auto" />
-                <h4 className="font-heading text-2xl text-brand-white">CALL BACK REQUESTED!</h4>
-                <p className="text-sm text-brand-gray">
-                  Thank you, <strong className="text-brand-yellow">{formData.name || "Member"}</strong>. Our team at The BeingStrong Fitness will reach out to you shortly on <strong className="text-brand-white">{formData.phone}</strong>.
-                </p>
+            <div className="space-y-6 relative z-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-yellow text-brand-black font-extrabold text-xs tracking-widest uppercase rounded-sm shadow-md">
+                OFFICIAL FITNESS CENTER
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-xs font-bold text-brand-gray uppercase tracking-widest mb-2">
-                    NAME *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Enter your full name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3.5 bg-brand-black border border-brand-darkgray focus:border-brand-yellow text-brand-white rounded outline-none transition-colors text-sm"
-                  />
+
+              <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight text-brand-white leading-none">
+                THE <span className="text-brand-yellow">BEINGSTRONG</span> FITNESS
+              </h3>
+
+              <p className="text-brand-gray text-base sm:text-lg leading-relaxed">
+                Vadodara’s ultimate high-performance workout center engineered for serious lifters, functional training, and transformative results.
+              </p>
+
+              {/* Feature Highlights Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                <div className="p-4 bg-brand-black/60 border border-brand-darkgray rounded-xl">
+                  <span className="text-brand-yellow font-heading text-xl block mb-1">4 FLOOR FACILITY</span>
+                  <p className="text-xs text-brand-gray">Spacious workout areas covering 3rd, 4th, 5th, & 6th floors.</p>
                 </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-brand-gray uppercase tracking-widest mb-2">
-                    PHONE NUMBER *
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="+91 00000 00000"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3.5 bg-brand-black border border-brand-darkgray focus:border-brand-yellow text-brand-white rounded outline-none transition-colors text-sm"
-                  />
+                <div className="p-4 bg-brand-black/60 border border-brand-darkgray rounded-xl">
+                  <span className="text-brand-yellow font-heading text-xl block mb-1">PREMIUM EQUIPMENT</span>
+                  <p className="text-xs text-brand-gray">Heavy duty strength machinery and modern cardio setup.</p>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs font-bold text-brand-gray uppercase tracking-widest mb-2">
-                      FITNESS GOAL
-                    </label>
-                    <select
-                      value={formData.goal}
-                      onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
-                      className="w-full px-4 py-3.5 bg-brand-black border border-brand-darkgray focus:border-brand-yellow text-brand-white rounded outline-none transition-colors text-sm"
-                    >
-                      <option>Strength & Muscle Gain</option>
-                      <option>Fat Loss & Toning</option>
-                      <option>General Fitness & Wellness</option>
-                      <option>Personal Training</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-brand-gray uppercase tracking-widest mb-2">
-                      PREFERRED TRAINING TIME
-                    </label>
-                    <select
-                      value={formData.time}
-                      onChange={(e) => setFormData({ ...formData, time: e.target.value })}
-                      className="w-full px-4 py-3.5 bg-brand-black border border-brand-darkgray focus:border-brand-yellow text-brand-white rounded outline-none transition-colors text-sm"
-                    >
-                      <option>Morning (6 AM - 10 AM)</option>
-                      <option>Afternoon (11 AM - 4 PM)</option>
-                      <option>Evening (5 PM - 10 PM)</option>
-                    </select>
-                  </div>
+                <div className="p-4 bg-brand-black/60 border border-brand-darkgray rounded-xl">
+                  <span className="text-brand-yellow font-heading text-xl block mb-1">EXPERT COACHING</span>
+                  <p className="text-xs text-brand-gray">Certified trainers for custom goals & guidance.</p>
                 </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-brand-gray uppercase tracking-widest mb-2">
-                    MESSAGE (OPTIONAL)
-                  </label>
-                  <textarea
-                    rows={4}
-                    placeholder="Tell us about your fitness targets..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3.5 bg-brand-black border border-brand-darkgray focus:border-brand-yellow text-brand-white rounded outline-none transition-colors text-sm resize-none"
-                  />
+                <div className="p-4 bg-brand-black/60 border border-brand-darkgray rounded-xl">
+                  <span className="text-brand-yellow font-heading text-xl block mb-1">PRIME LOCATION</span>
+                  <p className="text-xs text-brand-gray">Conveniently located at Mahavir Hall, Ajwa Road.</p>
                 </div>
+              </div>
+            </div>
 
-                <button
-                  type="submit"
-                  className="w-full py-4 bg-brand-yellow text-brand-black font-heading text-xl tracking-wider hover:bg-brand-yellow-hover transition-all flex items-center justify-center gap-2 rounded-sm shadow-[0_0_20px_rgba(255,208,0,0.3)]"
-                >
-                  <Send size={20} />
-                  REQUEST A CALL BACK
-                </button>
-              </form>
-            )}
+            <div className="mt-8 pt-6 border-t border-brand-darkgray flex flex-wrap items-center justify-between gap-4 relative z-10">
+              <span className="text-xs text-brand-gray font-bold tracking-widest uppercase">
+                STAY STRONG & FIT WITH US
+              </span>
+              <a
+                href="tel:+919724073707"
+                className="px-6 py-3 bg-brand-yellow text-brand-black font-heading text-lg tracking-wider rounded hover:bg-brand-yellow-hover transition-colors shadow-lg"
+              >
+                CONNECT WITH US
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -27,6 +27,13 @@ const placeholderTrainers = [
     bio: "[TRAINER INFORMATION] — Dedicated 1-on-1 personal guidance for custom fitness transformations and nutrition oversight.",
     image: "/images/facility-cardio.jpg",
   },
+  {
+    id: 4,
+    name: "[TRAINER NAME]",
+    role: "FUNCTIONAL & HYPERTROPHY COACH",
+    bio: "[TRAINER INFORMATION] — Focused on body composition, strength routines, endurance, and form precision.",
+    image: "/images/hero-bg.jpg",
+  },
 ];
 
 export default function Trainers() {
@@ -49,8 +56,8 @@ export default function Trainers() {
           </div>
         </div>
 
-        {/* Trainers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Trainers Grid - 4 tabs in a row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {placeholderTrainers.map((trainer, index) => (
             <motion.div
               key={trainer.id}
@@ -61,13 +68,13 @@ export default function Trainers() {
               whileHover={{ y: -8 }}
               className="bg-brand-black border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col"
             >
-              <div className="relative h-72 w-full bg-brand-darkgray overflow-hidden">
+              <div className="relative h-64 w-full bg-brand-darkgray overflow-hidden">
                 <Image
                   src={trainer.image}
                   alt={trainer.name}
                   fill
                   quality={IMAGE_QUALITY}
-                  sizes={imageSizes.thirdWidth}
+                  sizes={imageSizes.fourthWidth}
                   className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
@@ -77,28 +84,28 @@ export default function Trainers() {
                 </div>
               </div>
 
-              <div className="p-6 flex flex-col flex-grow justify-between">
+              <div className="p-5 flex flex-col flex-grow justify-between">
                 <div>
-                  <span className="text-xs font-bold text-brand-yellow uppercase tracking-widest block mb-1">
+                  <span className="text-[11px] font-bold text-brand-yellow uppercase tracking-widest block mb-1">
                     {trainer.role}
                   </span>
-                  <h3 className="font-heading text-3xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors mb-3">
+                  <h3 className="font-heading text-2xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors mb-3">
                     {trainer.name}
                   </h3>
-                  <p className="text-brand-gray text-sm leading-relaxed mb-6">
+                  <p className="text-brand-gray text-xs sm:text-sm leading-relaxed mb-6">
                     {trainer.bio}
                   </p>
                 </div>
 
                 <div className="pt-4 border-t border-brand-darkgray flex items-center justify-between">
-                  <span className="text-xs text-brand-gray font-semibold">COACHING STAFF</span>
+                  <span className="text-[10px] text-brand-gray font-semibold">COACHING STAFF</span>
                   <a
                     href="https://www.instagram.com/the_beingstrong_fitness/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-brand-charcoal text-brand-yellow hover:bg-brand-yellow hover:text-brand-black transition-colors"
                   >
-                    <Instagram size={18} />
+                    <Instagram size={16} />
                   </a>
                 </div>
               </div>
