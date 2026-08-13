@@ -10,6 +10,7 @@ import Facilities from "@/components/Facilities";
 import Trainers from "@/components/Trainers";
 import Owners from "@/components/Owners";
 import Membership from "@/components/Membership";
+import PersonalTraining from "@/components/PersonalTraining";
 import Reviews from "@/components/Reviews";
 import Motivational from "@/components/Motivational";
 import Location from "@/components/Location";
@@ -30,6 +31,7 @@ export default function Home() {
         <Trainers />
         <Owners />
         <Membership />
+        <PersonalTraining />
         <Reviews />
         <Motivational />
         <Location />
