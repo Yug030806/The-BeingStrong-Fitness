@@ -1,26 +1,17 @@
 "use client";
 
-import Image from "next/image";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Instagram, ArrowRight } from "lucide-react";
-import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
+
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-transparent">
-      {/* Background Image with Dark Overlay and Yellow Lighting */}
+      {/* Background Gradient */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="The BeingStrong Fitness Gym Interior"
-          fill
-          priority
-          quality={IMAGE_QUALITY}
-          sizes={imageSizes.fullWidth}
-          className="object-cover object-center opacity-40 scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-brand-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/90 to-brand-black/70" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-yellow/10 blur-[140px] pointer-events-none" />
       </div>
 
