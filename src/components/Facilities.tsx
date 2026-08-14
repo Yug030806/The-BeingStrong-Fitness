@@ -36,12 +36,6 @@ const facilityCards = [
     image: "/images/about-gym.jpg",
     tag: "FUNCTIONAL",
   },
-  {
-    title: "MULTI-FLOOR GYM AREA",
-    desc: "Spacious multi-level workout floors offering zero bottlenecking even during peak evening hours.",
-    image: "/images/facility-dumbbells.jpg",
-    tag: "4 FLOORS SPACE",
-  },
 ];
 
 export default function Facilities() {
@@ -70,7 +64,7 @@ export default function Facilities() {
         </div>
 
         {/* Facilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {facilityCards.map((card, idx) => (
             <motion.div
               key={card.title + idx}
@@ -79,7 +73,7 @@ export default function Facilities() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-brand-charcoal/80 backdrop-blur-md border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col"
+              className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] bg-brand-charcoal/80 backdrop-blur-md border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col"
             >
               {/* Image Container with Zoom & Glow */}
               <div className="relative h-60 w-full overflow-hidden">
