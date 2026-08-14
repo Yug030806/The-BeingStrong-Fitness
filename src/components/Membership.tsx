@@ -66,7 +66,7 @@ const plans = [
 
 export default function Membership() {
   return (
-    <section id="membership" className="relative py-24 bg-brand-charcoal text-brand-white border-t border-brand-darkgray/60">
+    <section id="membership" className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-yellow/10 border border-brand-yellow/30 rounded-md mb-3">
@@ -98,10 +98,10 @@ export default function Membership() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`rounded-xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative ${
+              className={`rounded-xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative backdrop-blur-md ${
                 plan.isRecommended
-                  ? "bg-brand-card border-2 border-brand-yellow shadow-[0_0_30px_rgba(255,208,0,0.2)]"
-                  : "bg-brand-black border border-brand-darkgray hover:border-brand-yellow/50"
+                  ? "bg-brand-card/85 border-2 border-brand-yellow shadow-[0_0_30px_rgba(255,208,0,0.2)]"
+                  : "bg-brand-black/75 border border-brand-darkgray hover:border-brand-yellow/50"
               }`}
             >
               {plan.isRecommended && (

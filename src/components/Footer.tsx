@@ -10,6 +10,7 @@ const quickLinks = [
   { name: "ABOUT", href: "#about" },
   { name: "FACILITIES", href: "#facilities" },
   { name: "TRAINERS", href: "#trainers" },
+  { name: "MANAGEMENT", href: "#management" },
   { name: "MEMBERSHIP", href: "#membership" },
   { name: "PT PLANS", href: "#personal-training" },
   { name: "REVIEWS", href: "#reviews" },
@@ -22,7 +23,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-brand-black text-brand-white border-t-2 border-brand-yellow/30">
+    <footer className="relative bg-brand-black/80 backdrop-blur-md text-brand-white border-t-2 border-brand-yellow/30">
       {/* Back to Top */}
       <div className="flex justify-center -mt-6 relative z-10">
         <button

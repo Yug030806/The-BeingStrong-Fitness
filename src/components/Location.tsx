@@ -8,7 +8,7 @@ export default function Location() {
   const embedMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.077651034444!2d73.2285!3d22.3135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5a468d66007%3A0x28f99e3a6a12345!2sAjwa%20Rd%2C%20Vadodara%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
 
   return (
-    <section className="relative py-24 bg-brand-charcoal text-brand-white border-t border-brand-darkgray/60">
+    <section className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold text-brand-yellow uppercase tracking-[0.3em] block mb-2">
@@ -29,7 +29,7 @@ export default function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 bg-brand-black border-2 border-brand-darkgray hover:border-brand-yellow/50 rounded-2xl p-8 flex flex-col justify-between shadow-2xl transition-colors"
+            className="lg:col-span-5 bg-brand-black/80 backdrop-blur-md border-2 border-brand-darkgray hover:border-brand-yellow/50 rounded-2xl p-8 flex flex-col justify-between shadow-2xl transition-colors"
           >
             <div>
               <div className="w-12 h-12 rounded-full bg-brand-yellow/10 border border-brand-yellow flex items-center justify-center text-brand-yellow mb-6">

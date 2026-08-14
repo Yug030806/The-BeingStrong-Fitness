@@ -46,7 +46,7 @@ const facilityCards = [
 
 export default function Facilities() {
   return (
-    <section id="facilities" className="relative py-24 bg-brand-black text-brand-white border-t border-brand-darkgray/60">
+    <section id="facilities" className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-yellow/10 border border-brand-yellow/30 rounded-md mb-3">
@@ -79,7 +79,7 @@ export default function Facilities() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-brand-charcoal border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col"
+              className="bg-brand-charcoal/80 backdrop-blur-md border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col"
             >
               {/* Image Container with Zoom & Glow */}
               <div className="relative h-60 w-full overflow-hidden">

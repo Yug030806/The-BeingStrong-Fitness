@@ -8,7 +8,7 @@ import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 bg-brand-black text-brand-white border-t border-brand-darkgray/50">
+    <section id="about" className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column: Image Placeholder / Gym Facility Visual */}

@@ -5,7 +5,7 @@ import { Star, MapPin, ExternalLink, ShieldCheck } from "lucide-react";
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="relative py-24 bg-brand-black text-brand-white border-t border-brand-darkgray/60">
+    <section id="reviews" className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold text-brand-yellow uppercase tracking-[0.3em] block mb-2">
@@ -25,7 +25,7 @@ export default function Reviews() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-md mx-auto bg-brand-charcoal border-2 border-brand-yellow/50 rounded-2xl p-8 text-center shadow-[0_0_30px_rgba(255,208,0,0.15)] mb-16"
+          className="max-w-md mx-auto bg-brand-charcoal/80 backdrop-blur-md border-2 border-brand-yellow/50 rounded-2xl p-8 text-center shadow-[0_0_30px_rgba(255,208,0,0.15)] mb-16"
         >
           <div className="flex items-center justify-center gap-1 text-brand-yellow mb-2">
             {[...Array(5)].map((_, i) => (
@@ -54,7 +54,7 @@ export default function Reviews() {
         </motion.div>
 
         {/* Notice of Authenticity */}
-        <div className="max-w-2xl mx-auto bg-brand-card p-6 rounded-xl border border-brand-darkgray text-center space-y-3">
+        <div className="max-w-2xl mx-auto bg-brand-card/80 backdrop-blur-md p-6 rounded-xl border border-brand-darkgray text-center space-y-3">
           <div className="flex items-center justify-center gap-2 text-brand-yellow font-semibold text-sm">
             <ShieldCheck size={18} />
             <span>AUTHENTIC REVIEWS GUARANTEE</span>

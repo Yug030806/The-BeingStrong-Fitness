@@ -30,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 bg-brand-black text-brand-white border-t border-brand-darkgray/60">
+    <section id="contact" className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold text-brand-yellow uppercase tracking-[0.3em] block mb-2">
@@ -51,7 +51,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 bg-brand-charcoal border border-brand-darkgray rounded-2xl p-8 space-y-8 shadow-xl"
+            className="lg:col-span-5 bg-brand-charcoal/80 backdrop-blur-md border border-brand-darkgray rounded-2xl p-8 space-y-8 shadow-xl"
           >
             <div>
               <span className="text-xs font-bold text-brand-yellow uppercase tracking-widest block mb-1">
@@ -156,7 +156,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-7 bg-gradient-to-br from-brand-card via-brand-charcoal to-brand-black border-2 border-brand-yellow/40 rounded-2xl p-8 sm:p-12 shadow-[0_0_50px_rgba(255,208,0,0.12)] relative overflow-hidden flex flex-col justify-between"
+            className="lg:col-span-7 bg-gradient-to-br from-brand-card/85 via-brand-charcoal/80 to-brand-black/80 backdrop-blur-md border-2 border-brand-yellow/40 rounded-2xl p-8 sm:p-12 shadow-[0_0_50px_rgba(255,208,0,0.12)] relative overflow-hidden flex flex-col justify-between"
           >
             <div className="absolute -top-16 -right-16 w-64 h-64 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none" />
 

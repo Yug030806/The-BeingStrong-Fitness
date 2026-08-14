@@ -8,7 +8,7 @@ import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-brand-black">
+    <section id="home" className="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-transparent">
       {/* Background Image with Dark Overlay and Yellow Lighting */}
       <div className="absolute inset-0 z-0">
         <Image

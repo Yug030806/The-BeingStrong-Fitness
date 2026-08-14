@@ -8,7 +8,7 @@ import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 export default function Motivational() {
   return (
-    <section className="relative py-28 bg-brand-black text-brand-white border-t border-brand-darkgray/60 overflow-hidden">
+    <section className="relative py-28 bg-transparent text-brand-white border-t border-brand-darkgray/60 overflow-hidden">
       {/* Background Image overlay */}
       <div className="absolute inset-0 z-0">
         <Image

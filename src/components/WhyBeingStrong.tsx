@@ -38,7 +38,7 @@ const whyItems = [
 
 export default function WhyBeingStrong() {
   return (
-    <section className="relative py-24 bg-brand-charcoal text-brand-white border-t border-brand-darkgray/60 overflow-hidden">
+    <section className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/60 overflow-hidden">
       {/* Decorative Barbell Graphic */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -66,7 +66,7 @@ export default function WhyBeingStrong() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                className="bg-brand-card border border-brand-darkgray hover:border-brand-yellow p-8 rounded-xl relative group transition-all duration-300 shadow-xl overflow-hidden"
+                className="bg-brand-card/70 backdrop-blur-md border border-brand-darkgray hover:border-brand-yellow p-8 rounded-xl relative group transition-all duration-300 shadow-xl overflow-hidden"
               >
                 {/* Subtle Yellow Glow Overlay on Hover */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-yellow/5 rounded-full blur-2xl group-hover:bg-brand-yellow/20 transition-all duration-500" />

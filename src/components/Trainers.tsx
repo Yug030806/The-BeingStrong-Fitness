@@ -38,7 +38,7 @@ const placeholderTrainers = [
 
 export default function Trainers() {
   return (
-    <section id="trainers" className="relative py-24 bg-brand-charcoal text-brand-white border-t border-brand-darkgray/60">
+    <section id="trainers" className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold text-brand-yellow uppercase tracking-[0.3em] block mb-2">
@@ -62,7 +62,7 @@ export default function Trainers() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-brand-black border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col justify-between"
+              className="bg-brand-black/70 backdrop-blur-md border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col justify-between"
             >
               {/* Image with increased space */}
               <div className="relative h-80 sm:h-96 w-full bg-brand-darkgray overflow-hidden">

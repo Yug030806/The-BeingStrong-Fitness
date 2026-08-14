@@ -31,7 +31,7 @@ const placeholderOwners = [
 
 export default function Owners() {
   return (
-    <section className="relative py-24 bg-brand-black text-brand-white border-t border-brand-darkgray/60 overflow-hidden">
+    <section className="relative py-24 bg-transparent text-brand-white border-t border-brand-darkgray/60 overflow-hidden">
       {/* Background Accent Glow */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-brand-yellow/5 rounded-full blur-[150px] pointer-events-none" />
 
@@ -61,7 +61,7 @@ export default function Owners() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-gradient-to-b from-brand-charcoal to-brand-card border-2 border-brand-yellow/40 rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,208,0,0.08)] hover:border-brand-yellow transition-all duration-300 flex flex-col justify-between"
+              className="bg-gradient-to-b from-brand-charcoal/80 to-brand-card/80 backdrop-blur-md border-2 border-brand-yellow/40 rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,208,0,0.08)] hover:border-brand-yellow transition-all duration-300 flex flex-col justify-between"
             >
               {/* Photo with extra space */}
               <div className="relative h-80 sm:h-[400px] w-full bg-brand-darkgray overflow-hidden">

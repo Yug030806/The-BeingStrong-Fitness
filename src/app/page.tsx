@@ -2,12 +2,14 @@
 
 import LoadingScreen from "@/components/LoadingScreen";
 import ScrollProgress from "@/components/ScrollProgress";
+import RotatingBackgroundLogos from "@/components/RotatingBackgroundLogos";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import WhyBeingStrong from "@/components/WhyBeingStrong";
 import Facilities from "@/components/Facilities";
 import Trainers from "@/components/Trainers";
+import Management from "@/components/Management";
 import Owners from "@/components/Owners";
 import Membership from "@/components/Membership";
 import PersonalTraining from "@/components/PersonalTraining";
@@ -22,6 +24,7 @@ export default function Home() {
     <>
       <LoadingScreen />
       <ScrollProgress />
+      <RotatingBackgroundLogos />
       <Navbar />
       <main>
         <Hero />
@@ -29,6 +32,7 @@ export default function Home() {
         <WhyBeingStrong />
         <Facilities />
         <Trainers />
+        <Management />
         <Owners />
         <Membership />
         <PersonalTraining />
