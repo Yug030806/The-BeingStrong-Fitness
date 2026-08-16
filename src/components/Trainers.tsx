@@ -2,36 +2,27 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram } from "lucide-react";
 import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const placeholderTrainers = [
   {
     id: 1,
     name: "[TRAINER NAME]",
-    insta: "@the_beingstrong_fitness",
-    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/about-gym.jpg",
   },
   {
     id: 2,
     name: "[TRAINER NAME]",
-    insta: "@the_beingstrong_fitness",
-    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/facility-dumbbells.jpg",
   },
   {
     id: 3,
     name: "[TRAINER NAME]",
-    insta: "@the_beingstrong_fitness",
-    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/facility-cardio.jpg",
   },
   {
     id: 4,
     name: "[TRAINER NAME]",
-    insta: "@the_beingstrong_fitness",
-    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/hero-bg.jpg",
   },
 ];
@@ -77,31 +68,11 @@ export default function Trainers() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
               </div>
 
-              {/* Name & Instagram ID only */}
-              <div className="p-5 flex items-center justify-between gap-3 border-t border-brand-darkgray bg-brand-black">
-                <div className="truncate">
-                  <h3 className="font-heading text-xl sm:text-2xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors truncate">
-                    {trainer.name}
-                  </h3>
-                  <a
-                    href={trainer.instaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-brand-gray hover:text-brand-yellow transition-colors block truncate"
-                  >
-                    {trainer.insta}
-                  </a>
-                </div>
-
-                <a
-                  href={trainer.instaLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-full bg-brand-charcoal text-brand-yellow hover:bg-brand-yellow hover:text-brand-black transition-colors shrink-0"
-                  aria-label="Instagram profile"
-                >
-                  <Instagram size={18} />
-                </a>
+              {/* Name only */}
+              <div className="p-5 text-center border-t border-brand-darkgray bg-brand-black">
+                <h3 className="font-heading text-xl sm:text-2xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors truncate">
+                  {trainer.name}
+                </h3>
               </div>
             </motion.div>
           ))}

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { UserCheck, Instagram } from "lucide-react";
+import { UserCheck } from "lucide-react";
 import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const placeholderManagement = [
@@ -10,8 +10,6 @@ const placeholderManagement = [
     id: 1,
     name: "[MANAGER NAME]",
     role: "General Manager",
-    insta: "@the_beingstrong_fitness",
-    instaLink: "https://www.instagram.com/the_beingstrong_fitness/",
     image: "/images/facility-dumbbells.jpg",
     description: "Oversees daily operations and ensures a seamless experience for all members.",
   },
@@ -64,35 +62,15 @@ export default function Management() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
               </div>
 
-              {/* Details with Name, Role, Instagram ID & Description */}
+              {/* Details with Name, Role & Description */}
               <div className="p-6 bg-brand-black border-t border-brand-darkgray flex flex-col gap-4">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="font-heading text-2xl sm:text-3xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors">
-                      {manager.name}
-                    </h3>
-                    <span className="text-xs font-bold uppercase tracking-widest text-brand-yellow block mt-0.5">
-                      {manager.role}
-                    </span>
-                    <a
-                      href={manager.instaLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-brand-gray hover:text-brand-yellow transition-colors inline-block mt-1"
-                    >
-                      {manager.insta}
-                    </a>
-                  </div>
-
-                  <a
-                    href={manager.instaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-brand-charcoal text-brand-yellow hover:bg-brand-yellow hover:text-brand-black transition-colors shrink-0"
-                    aria-label="Instagram profile"
-                  >
-                    <Instagram size={20} />
-                  </a>
+                <div>
+                  <h3 className="font-heading text-2xl sm:text-3xl uppercase tracking-wider text-brand-white group-hover:text-brand-yellow transition-colors">
+                    {manager.name}
+                  </h3>
+                  <span className="text-xs font-bold uppercase tracking-widest text-brand-yellow block mt-0.5">
+                    {manager.role}
+                  </span>
                 </div>
 
                 <p className="text-sm text-brand-gray border-t border-brand-darkgray/60 pt-3 leading-relaxed">
