@@ -9,7 +9,7 @@ const facilityCards = [
   {
     title: "FREE WEIGHTS ZONE",
     desc: "Comprehensive rack systems, Olympic barbells, powerlifting benches, and heavy iron plates.",
-    image: "/images/about-gym.jpg",
+    image: "/images/facility-freeweights.jpg",
     tag: "STRENGTH AREA",
   },
   {
@@ -27,13 +27,13 @@ const facilityCards = [
   {
     title: "STRENGTH EQUIPMENT",
     desc: "Bio-mechanically optimized resistance cable towers, leg press, lat pulldowns, and chest presses.",
-    image: "/images/hero-bg.jpg",
+    image: "/images/facility-strength.jpg",
     tag: "MACHINERY",
   },
   {
     title: "FUNCTIONAL TRAINING AREA",
     desc: "Open turf and mat spaces for kettlebells, battle ropes, bodyweight exercises, and mobility work.",
-    image: "/images/about-gym.jpg",
+    image: "/images/facility-functional.jpg",
     tag: "FUNCTIONAL",
   },
 ];

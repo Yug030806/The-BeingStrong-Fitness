@@ -21,8 +21,8 @@ export default function About() {
           >
             <div className="relative h-[400px] sm:h-[500px] w-full rounded-2xl overflow-hidden border-2 border-brand-darkgray shadow-[0_0_30px_rgba(0,0,0,0.8)] group">
               <Image
-                src="/images/about-gym.jpg"
-                alt="The BeingStrong Fitness Gym Floor"
+                src="/images/about-building.jpg"
+                alt="The BeingStrong Fitness Building Exterior"
                 fill
                 quality={IMAGE_QUALITY}
                 sizes={imageSizes.halfWidth}

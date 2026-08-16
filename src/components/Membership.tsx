@@ -11,6 +11,8 @@ const plans = [
     price: "₹2,499",
     period: "1 MONTH",
     isRecommended: false,
+    hasBorder: false,
+    badge: null,
     features: [
       "Access to All 4 Gym Floors",
       "Full Equipment & Free Weights Zone",
@@ -24,6 +26,8 @@ const plans = [
     price: "₹4,499",
     period: "3 MONTHS",
     isRecommended: false,
+    hasBorder: false,
+    badge: null,
     features: [
       "Full Multi-Floor Gym Access",
       "Comprehensive Equipment & Cardio Zone",
@@ -38,6 +42,8 @@ const plans = [
     price: "₹5,499",
     period: "6 MONTHS",
     isRecommended: true,
+    hasBorder: true,
+    badge: "MOST POPULAR",
     features: [
       "Unlimited Multi-Floor Access",
       "Priority Floor Support",
@@ -53,6 +59,8 @@ const plans = [
     price: "₹8,499",
     period: "12 MONTHS",
     isRecommended: false,
+    hasBorder: true,
+    badge: "VALUE FOR MONEY",
     features: [
       "Unlimited Multi-Floor Access All Year",
       "Priority Floor Support & Guidance",
@@ -99,14 +107,20 @@ export default function Membership() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
               className={`rounded-xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative backdrop-blur-md ${
-                plan.isRecommended
+                plan.hasBorder || plan.isRecommended
                   ? "bg-brand-card/85 border-2 border-brand-yellow shadow-[0_0_30px_rgba(255,208,0,0.2)]"
                   : "bg-brand-black/75 border border-brand-darkgray hover:border-brand-yellow/50"
               }`}
             >
-              {plan.isRecommended && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-yellow text-brand-black font-heading text-xs uppercase px-4 py-1 rounded-full tracking-widest font-bold shadow-md">
-                  MOST POPULAR
+              {plan.badge && (
+                <div
+                  className={`absolute -top-3.5 left-1/2 -translate-x-1/2 font-heading text-xs uppercase px-4 py-1 rounded-full tracking-widest font-bold shadow-md whitespace-nowrap ${
+                    plan.isRecommended
+                      ? "bg-brand-yellow text-brand-black"
+                      : "bg-brand-yellow text-brand-black border border-brand-yellow/60"
+                  }`}
+                >
+                  {plan.badge}
                 </div>
               )}
 
