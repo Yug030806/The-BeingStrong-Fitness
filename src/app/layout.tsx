@@ -30,7 +30,8 @@ export const metadata: Metadata = {
     "workout",
     "personal training",
   ],
-  openGraph: {
+  verification:{google:<meta name="google-site-verification" content="XWK6Lw4aj6LG4jDaTo1DMuWeIJyWsSuTWpXETif3q20" />} 
+   openGraph: {
     title: "The BeingStrong Fitness | Stay Strong and Fit | Vadodara",
     description:
       "The BeingStrong Fitness in Vadodara — a dedicated fitness centre focused on strength, fitness and consistent training.",
