@@ -94,6 +94,7 @@ export default function RootLayout({
               },
             }),
           }}
+          <meta name="google-site-verification" content="XWK6Lw4aj6LG4jDaTo1DMuWeIJyWsSuTWpXETif3q20" />
         />
       </head>
       <body
