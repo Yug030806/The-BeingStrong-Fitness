@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://the-being-strong-fitness.vercel.app/sitemap.xml
