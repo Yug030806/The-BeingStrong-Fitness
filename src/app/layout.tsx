@@ -97,13 +97,11 @@ export default function RootLayout({
                 bestRating: "5",
               },
             }),
-          }}
-          <meta name="google-site-verification" content="XWK6Lw4aj6LG4jDaTo1DMuWeIJyWsSuTWpXETif3q20" />
-        />
+          }}/>
       </head>
-      <body
+      <body>
         className={`${bebasNeue.variable} ${inter.variable} antialiased bg-brand-black text-brand-white`}
-      >
+      
         {children}
       </body>
     </html>
