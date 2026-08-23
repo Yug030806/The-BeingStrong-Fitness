@@ -95,6 +95,7 @@ export default function RootLayout({
                 "@type": "AggregateRating",
                 ratingValue: "4.5",
                 bestRating: "5",
+                ratingCount: "62", // Replace with the actual number of reviews
               },
             }),
           }}/>
