@@ -59,8 +59,14 @@ export const metadata: Metadata = {
     images: ["/images/the_beingstrong_logo.png"],
   },
   icons: {
-    icon: "/images/the_beingstrong_logo.png",
-    apple: "/images/the_beingstrong_logo.png",
+    icon: [
+      { url: "/images/the_beingstrong_logo.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/images/the_beingstrong_logo.png",
+    apple: [
+      { url: "/images/the_beingstrong_logo.png", type: "image/png" },
+    ],
   },
 };
 
@@ -72,6 +78,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/images/the_beingstrong_logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/images/the_beingstrong_logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/the_beingstrong_logo.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
