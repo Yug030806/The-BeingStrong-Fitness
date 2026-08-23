@@ -78,17 +78,9 @@ export default function Hero() {
               <ArrowRight size={20} />
             </Link>
 
-            <a
-              href="tel:+919724073707"
-              className="px-8 py-4 border border-brand-yellow text-brand-yellow font-heading text-xl tracking-wider hover:bg-brand-yellow hover:text-brand-black transition-all flex items-center gap-2 rounded-sm"
-            >
-              <Phone size={20} />
-              CALL NOW
-            </a>
-
             <Link
               href="#facilities"
-              className="px-6 py-4 text-brand-gray font-semibold text-sm hover:text-brand-white transition-colors"
+              className="px-8 py-4 border border-brand-darkgray text-brand-gray hover:border-brand-yellow hover:text-brand-yellow font-heading text-xl tracking-wider transition-all flex items-center gap-2 rounded-sm"
             >
               EXPLORE THE GYM →
             </Link>
@@ -134,7 +126,7 @@ export default function Hero() {
             </div>
             <div>
               <span className="text-[10px] text-brand-gray uppercase tracking-widest block font-bold">
-                CALL GYM DIRECTLY
+                PHONE ENQUIRY
               </span>
               <span className="text-sm font-bold text-brand-white group-hover:text-brand-yellow transition-colors">
                 +91 97240 73707
