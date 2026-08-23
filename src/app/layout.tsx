@@ -99,9 +99,7 @@ export default function RootLayout({
             }),
           }}/>
       </head>
-      <body>
-        className={`${bebasNeue.variable} ${inter.variable} antialiased bg-brand-black text-brand-white`}
-      
+      <body className={`${bebasNeue.variable} ${inter.variable} antialiased bg-brand-black text-brand-white`}>
         {children}
       </body>
     </html>

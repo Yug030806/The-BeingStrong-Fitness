@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 
 const navLinks = [
@@ -59,23 +59,22 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-brand-black/95 backdrop-blur-md border-b border-brand-darkgray py-3 shadow-xl"
-          : "bg-gradient-to-b from-brand-black/90 to-transparent py-5"
+          ? "bg-brand-black/90 backdrop-blur-md py-3 border-b border-brand-darkgray shadow-lg"
+          : "bg-gradient-to-b from-brand-black/90 via-brand-black/50 to-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo & Name */}
+        {/* Logo */}
         <Link href="#home" className="flex items-center gap-3 group">
-          <div className="relative w-14 h-14 sm:w-16 sm:h-16 group-hover:scale-105 transition-transform">
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
             <Image
               src="/images/the_beingstrong_logo.png"
               alt="The BeingStrong Fitness Logo"
               fill
-              priority
-              quality={100}
-              unoptimized
               sizes={imageSizes.logo}
-              className="object-contain"
+              quality={IMAGE_QUALITY}
+              className="object-contain group-hover:scale-105 transition-transform"
+              priority
             />
           </div>
           <div className="flex flex-col">
@@ -103,13 +102,6 @@ export default function Navbar() {
 
         {/* Right Action CTA */}
         <div className="hidden sm:flex items-center gap-4">
-          <a
-            href="tel:+919724073707"
-            className="flex items-center gap-2 text-xs font-semibold text-brand-gray hover:text-brand-yellow transition-colors"
-          >
-            <Phone size={14} className="text-brand-yellow" />
-            +91 97240 73707
-          </a>
           <Link
             href="#contact"
             className="px-5 py-2.5 bg-brand-yellow text-brand-black font-heading tracking-wider text-base hover:bg-brand-yellow-hover hover:scale-105 active:scale-95 transition-all shadow-[0_0_15px_rgba(255,208,0,0.3)] rounded-sm"
@@ -181,13 +173,6 @@ export default function Navbar() {
             }`}
             style={{ transitionDelay: mobileMenuOpen ? "400ms" : "0ms" }}
           >
-            <a
-              href="tel:+919724073707"
-              className="flex items-center justify-center gap-2 py-2.5 border border-brand-darkgray text-brand-white text-sm font-semibold rounded"
-            >
-              <Phone size={16} className="text-brand-yellow" />
-              CALL +91 97240 73707
-            </a>
             <Link
               href="#contact"
               onClick={closeMobileMenu}
