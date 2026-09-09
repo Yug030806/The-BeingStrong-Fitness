@@ -15,7 +15,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://the-being-strong-fitness.vercel.app";
+const siteUrl = "https://www.thebeingstrongfitness.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
