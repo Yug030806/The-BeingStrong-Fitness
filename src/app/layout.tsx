@@ -15,10 +15,16 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl = "https://the-being-strong-fitness.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "The BeingStrong Fitness | Stay Strong and Fit | Vadodara",
   description:
     "The BeingStrong Fitness in Vadodara — a dedicated fitness centre focused on strength, fitness and consistent training.",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "gym",
     "fitness",
@@ -34,11 +40,10 @@ export const metadata: Metadata = {
     google: "XWK6Lw4aj6LG4jDaTo1DMuWeIJyWsSuTWpXETif3q20",
   },
   openGraph: {
-  
     title: "The BeingStrong Fitness | Stay Strong and Fit | Vadodara",
     description:
       "The BeingStrong Fitness in Vadodara — a dedicated fitness centre focused on strength, fitness and consistent training.",
-    url: "https://www.thebeingstrongfitness.com",
+    url: siteUrl,
     siteName: "The BeingStrong Fitness",
     locale: "en_IN",
     type: "website",
@@ -88,7 +93,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "The BeingStrong Fitness",
-              image: "/images/the_beingstrong_logo.png",
+              image: `${siteUrl}/images/the_beingstrong_logo.png`,
               telephone: "+919724073707",
               address: {
                 "@type": "PostalAddress",
@@ -99,15 +104,16 @@ export default function RootLayout({
                 postalCode: "390019",
                 addressCountry: "IN",
               },
-              url: "https://www.thebeingstrongfitness.com",
+              url: siteUrl,
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.5",
                 bestRating: "5",
-                ratingCount: "62", // Replace with the actual number of reviews
+                ratingCount: "62",
               },
             }),
-          }}/>
+          }}
+        />
       </head>
       <body className={`${bebasNeue.variable} ${inter.variable} antialiased bg-brand-black text-brand-white`}>
         {children}
