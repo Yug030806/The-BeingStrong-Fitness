@@ -7,23 +7,23 @@ import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 const placeholderTrainers = [
   {
     id: 1,
-    name: "[TRAINER NAME]",
-    image: "/images/about-gym.jpg",
+    name: "Pravin",
+    image: "/images/trainer-01.jpg",
   },
   {
     id: 2,
-    name: "[TRAINER NAME]",
-    image: "/images/facility-dumbbells.jpg",
+    name: "Shubham",
+    image: "/images/trainer-02.jpg",
   },
   {
     id: 3,
-    name: "[TRAINER NAME]",
-    image: "/images/facility-cardio.jpg",
+    name: "Jay",
+    image: "/images/trainer-03.jpg",
   },
   {
     id: 4,
-    name: "[TRAINER NAME]",
-    image: "/images/hero-bg.jpg",
+    name: "Milan",
+    image: "/images/trainer-04.jpg",
   },
 ];
 
@@ -56,14 +56,14 @@ export default function Trainers() {
               className="bg-brand-black/70 backdrop-blur-md border border-brand-darkgray hover:border-brand-yellow rounded-xl overflow-hidden group transition-all duration-300 shadow-xl flex flex-col justify-between"
             >
               {/* Image with increased space */}
-              <div className="relative h-80 sm:h-96 w-full bg-brand-darkgray overflow-hidden">
+              <div className="relative h-96 sm:h-[400px] w-full bg-brand-darkgray overflow-hidden">
                 <Image
                   src={trainer.image}
                   alt={trainer.name}
                   fill
                   quality={IMAGE_QUALITY}
                   sizes={imageSizes.fourthWidth}
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                  className="object-cover object-top origin-top group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
               </div>

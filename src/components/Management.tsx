@@ -8,9 +8,9 @@ import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 const placeholderManagement = [
   {
     id: 1,
-    name: "[MANAGER NAME]",
+    name: "Mitul",
     role: "General Manager",
-    image: "/images/facility-dumbbells.jpg",
+    image: "/images/manager-01.jpg",
     description: "Oversees daily operations and ensures a seamless experience for all members.",
   },
 ];
@@ -50,14 +50,14 @@ export default function Management() {
               className="bg-gradient-to-b from-brand-charcoal/80 to-brand-card/80 backdrop-blur-md border-2 border-brand-yellow/40 rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,208,0,0.08)] hover:border-brand-yellow transition-all duration-300 flex flex-col justify-between"
             >
               {/* Photo */}
-              <div className="relative h-80 sm:h-96 w-full bg-brand-darkgray overflow-hidden">
+              <div className="relative h-96 sm:h-[480px] w-full bg-brand-darkgray overflow-hidden">
                 <Image
                   src={manager.image}
                   alt={manager.name}
                   fill
                   quality={IMAGE_QUALITY}
                   sizes={imageSizes.thirdWidth}
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                  className="object-cover object-top origin-top group-hover:scale-105 transition-transform duration-500 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
               </div>

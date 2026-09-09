@@ -8,18 +8,18 @@ import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 const placeholderOwners = [
   {
     id: 1,
-    name: "[OWNER NAME]",
-    image: "/images/hero-bg.jpg",
+    name: "Pratik",
+    image: "/images/owner-01.jpg",
   },
   {
     id: 2,
-    name: "[OWNER NAME]",
-    image: "/images/about-gym.jpg",
+    name: "Dr. Vishal",
+    image: "/images/owner-02.jpg",
   },
   {
     id: 3,
-    name: "[OWNER NAME]",
-    image: "/images/facility-dumbbells.jpg",
+    name: "Imran",
+    image: "/images/owner-03.jpg",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function Owners() {
                   fill
                   quality={IMAGE_QUALITY}
                   sizes={imageSizes.thirdWidth}
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                  className="object-cover object-top origin-top group-hover:scale-105 transition-transform duration-500 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
               </div>
