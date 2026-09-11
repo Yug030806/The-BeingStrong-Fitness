@@ -7,22 +7,22 @@ import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 const placeholderTrainers = [
   {
     id: 1,
-    name: "Pravin",
+    name: "Pravin Sir",
     image: "/images/trainer-01.jpg",
   },
   {
     id: 2,
-    name: "Shubham",
+    name: "Shubham Sir",
     image: "/images/trainer-02.jpg",
   },
   {
     id: 3,
-    name: "Jay",
+    name: "Jay Sir",
     image: "/images/trainer-03.jpg",
   },
   {
     id: 4,
-    name: "Milan",
+    name: "Milan Sir",
     image: "/images/trainer-04.jpg",
   },
 ];

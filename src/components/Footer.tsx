@@ -11,8 +11,6 @@ const quickLinks = [
   { name: "FACILITIES", href: "#facilities" },
   { name: "TRAINERS", href: "#trainers" },
   { name: "MANAGEMENT", href: "#management" },
-  { name: "MEMBERSHIP", href: "#membership" },
-  { name: "PT PLANS", href: "#personal-training" },
   { name: "REVIEWS", href: "#reviews" },
   { name: "CONTACT", href: "#contact" },
 ];

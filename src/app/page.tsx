@@ -11,8 +11,6 @@ import Facilities from "@/components/Facilities";
 import Trainers from "@/components/Trainers";
 import Management from "@/components/Management";
 import Owners from "@/components/Owners";
-import Membership from "@/components/Membership";
-import PersonalTraining from "@/components/PersonalTraining";
 import Reviews from "@/components/Reviews";
 import Motivational from "@/components/Motivational";
 import Location from "@/components/Location";
@@ -34,8 +32,6 @@ export default function Home() {
         <Trainers />
         <Management />
         <Owners />
-        <Membership />
-        <PersonalTraining />
         <Reviews />
         <Motivational />
         <Location />
