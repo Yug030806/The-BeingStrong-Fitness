@@ -10,7 +10,7 @@ const placeholderManagement = [
     id: 1,
     name: "Mitul Sir",
     role: "General Manager",
-    image: "/images/manager-01.jpg",
+    image: "/images/Mitul.jpg",
     description: "Oversees daily operations and ensures a seamless experience for all members.",
   },
 ];

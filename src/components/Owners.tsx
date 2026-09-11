@@ -9,17 +9,17 @@ const placeholderOwners = [
   {
     id: 1,
     name: "Pratik Sir",
-    image: "/images/owner-01.jpg",
+    image: "/images/Pratik.jpeg",
   },
   {
     id: 2,
     name: "Dr. Vishal Sir",
-    image: "/images/owner-02.jpg",
+    image: "/images/Dr. .jpeg",
   },
   {
     id: 3,
     name: "Imran Sir",
-    image: "/images/owner-03.jpg",
+    image: "/images/Imran.jpeg",
   },
 ];
 

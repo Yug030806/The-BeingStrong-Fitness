@@ -8,22 +8,22 @@ const placeholderTrainers = [
   {
     id: 1,
     name: "Pravin Sir",
-    image: "/images/trainer-01.jpg",
+    image: "/images/Pravin.jpeg",
   },
   {
     id: 2,
     name: "Shubham Sir",
-    image: "/images/trainer-02.jpg",
+    image: "/images/Shubham.jpeg",
   },
   {
     id: 3,
     name: "Jay Sir",
-    image: "/images/trainer-03.jpg",
+    image: "/images/Jay.jpeg",
   },
   {
     id: 4,
     name: "Milan Sir",
-    image: "/images/trainer-04.jpg",
+    image: "/images/Milan.jpeg",
   },
 ];
 
