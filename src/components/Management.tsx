@@ -8,7 +8,7 @@ import { IMAGE_QUALITY, imageSizes } from "@/lib/images";
 const placeholderManagement = [
   {
     id: 1,
-    name: "Mitul",
+    name: "Mitul Sir",
     role: "General Manager",
     image: "/images/manager-01.jpg",
     description: "Oversees daily operations and ensures a seamless experience for all members.",
