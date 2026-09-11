@@ -6,7 +6,6 @@ import RotatingBackgroundLogos from "@/components/RotatingBackgroundLogos";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import WhyBeingStrong from "@/components/WhyBeingStrong";
 import Facilities from "@/components/Facilities";
 import Trainers from "@/components/Trainers";
 import Management from "@/components/Management";
@@ -27,7 +26,6 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <WhyBeingStrong />
         <Facilities />
         <Trainers />
         <Management />
