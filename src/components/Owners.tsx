@@ -14,7 +14,7 @@ const placeholderOwners = [
   {
     id: 2,
     name: "Dr. Vishal Sir",
-    image: "/images/Dr. .jpeg",
+    image: "/images/Vishal.jpeg",
   },
   {
     id: 3,
