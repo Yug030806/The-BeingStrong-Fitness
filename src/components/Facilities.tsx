@@ -206,10 +206,6 @@ export default function Facilities() {
                 ACCORDING TO YOUR SPECIFIC GOALS
               </p>
               
-              <p className="text-brand-gray text-sm sm:text-base leading-relaxed mb-6">
-                Strength and transformation require the right fuel and structured progression. Every member gets a personalized nutrition blueprint, macronutrient breakdown, and tailored training split engineered specifically for their body type, lifestyle, and fitness ambitions.
-              </p>
-
               {/* 3 Pillars */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="flex items-center gap-2.5 bg-brand-black/60 border border-brand-darkgray/80 px-3.5 py-2.5 rounded-lg">
