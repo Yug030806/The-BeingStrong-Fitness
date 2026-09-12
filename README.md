@@ -1,7 +1,5 @@
 <div align="center">
 
-  <img src="public/images/the_beingstrong_logo.png" alt="The BeingStrong Fitness Logo" width="130" height="130" style="border-radius: 50%;" />
-
   # 🏋️‍♂️ The BeingStrong Fitness
 
   **The official modern web application for The BeingStrong Fitness — Vadodara's premier multi-floor fitness, strength, and conditioning center.**
