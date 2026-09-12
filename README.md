@@ -40,19 +40,19 @@ This repository powers the official responsive web application, built with **Nex
 
 ## ✨ Key Features
 
-- **⚡ Modern Dark & Gold Aesthetic**: Designed around the signature brand identity (`#050505` black and `#FFD000` energetic yellow) with smooth glassmorphism, glowing accents, and typography driven by **Bebas Neue** and **Inter**.
-- **🏢 Multi-Floor Facility Showcase**: Dynamic categorized tabs to showcase:
+- ** Modern Dark & Gold Aesthetic**: Designed around the signature brand identity (`#050505` black and `#FFD000` energetic yellow) with smooth glassmorphism, glowing accents, and typography driven by **Bebas Neue** and **Inter**.
+- ** Multi-Floor Facility Showcase**: Dynamic categorized tabs to showcase:
   - **Free Weights Zone**: Olympic bars, heavy power racks, flat/incline benches, and Olympic plates.
   - **Dumbbells Section**: Comprehensive selection of heavy-duty hex & round dumbbells.
   - **Biomechanical Strength Equipment**: Pin-selected & plate-loaded machines, cable crossover towers, and leg presses.
   - **Cardio Suite**: Commercial treadmills, spin bikes, and ellipticals.
   - **Functional Turf**: Battle ropes, kettlebells, plyometrics, and mobility zones.
-- **🥊 Diverse Training Programs**: Dedicated spotlights for Personal Training, CrossFit, High-Intensity Interval Training (HIIT), Kickboxing, Zumba, Yoga, and Abs sculpting classes.
-- **🧖 Luxury Recovery & Amenities**: Visual highlights for steam bath, ice bath cryo-therapy, secure locker rooms, luxury shower cabins, and an on-site fresh juice & protein shake bar.
-- **👥 Coaches & Leadership Gallery**: Meet the team with custom profile cards for certified trainers, management, and gym leadership.
-- **⭐ Google Reviews & Social Proof**: Live 4.5★ Google rating integration with direct external links to authentic member testimonials on Google Maps.
-- **🗺️ Integrated Maps & Quick Contact**: Embedded Google Maps location, instant 1-tap WhatsApp inquiry button, and direct phone call triggers.
-- **🚀 Performance & SEO Engineered**:
+- ** Diverse Training Programs**: Dedicated spotlights for Personal Training, CrossFit, High-Intensity Interval Training (HIIT), Kickboxing, Zumba, Yoga, and Abs sculpting classes.
+- ** Luxury Recovery & Amenities**: Visual highlights for steam bath, ice bath cryo-therapy, secure locker rooms, luxury shower cabins, and an on-site fresh juice & protein shake bar.
+- ** Coaches & Leadership Gallery**: Meet the team with custom profile cards for certified trainers, management, and gym leadership.
+- ** Google Reviews & Social Proof**: Live 4.5★ Google rating integration with direct external links to authentic member testimonials on Google Maps.
+- ** Integrated Maps & Quick Contact**: Embedded Google Maps location, instant 1-tap WhatsApp inquiry button, and direct phone call triggers.
+- ** Performance & SEO Engineered**:
   - Full server-side rendering and static page generation via Next.js App Router.
   - Complete JSON-LD `LocalBusiness` structured data for search engine rich results.
   - Automated dynamic `sitemap.xml` and `robots.txt` generation.
@@ -74,22 +74,6 @@ This repository powers the official responsive web application, built with **Nex
 | **Fonts** | Next.js Font Optimization | `Bebas Neue` (Headings) & `Inter` (Body text) |
 | **Analytics** | Vercel Analytics & Speed Insights | Real-time user metrics and Web Vitals monitoring |
 | **Deployment** | [Vercel](https://vercel.com/) | Edge network global hosting with automatic CI/CD |
-
----
-
-## 🎨 Design System & Palette
-
-The design reflects discipline, power, and modern athletic luxury:
-
-| Color Token | Hex Code | Preview | Usage |
-| :--- | :--- | :---: | :--- |
-| `brand-black` | `#050505` | ![#050505](https://via.placeholder.com/15/050505/050505.png) | Primary page background |
-| `brand-charcoal` | `#111111` | ![#111111](https://via.placeholder.com/15/111111/111111.png) | Card & container surfaces |
-| `brand-card` | `#161616` | ![#161616](https://via.placeholder.com/15/161616/161616.png) | Elevated component cards |
-| `brand-yellow` | `#FFD000` | ![#FFD000](https://via.placeholder.com/15/FFD000/FFD000.png) | Primary brand accent & CTAs |
-| `brand-yellow-hover` | `#E6B800` | ![#E6B800](https://via.placeholder.com/15/E6B800/E6B800.png) | Interactive button hover states |
-| `brand-white` | `#FFFFFF` | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/FFFFFF.png) | Primary headings & high-contrast text |
-| `brand-gray` | `#A5A5A5` | ![#A5A5A5](https://via.placeholder.com/15/A5A5A5/A5A5A5.png) | Body text, captions & labels |
 
 ---
 
